@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Arora Enterprises - Leading electronics & solar solutions provider in Sirsa, Haryana. RO purifiers, inverters, batteries, solar systems, geysers - sales, repair & installation.">
+    <title>Arora Enterprises | Electronics & Solar Solutions in Sirsa</title>
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f8f9fa;
+        }
+
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo i {
+            margin-right: 10px;
+            color: #ffc107;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            color: #ffc107;
+        }
+
+        /* Main Content */
+        main {
+            margin-top: 70px;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIwMCIgaGVpZ2h0PSI0MDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjEwMCUiIHkyPSIxMDAlIj48c3RvcCBvZmZzZXQ9IjAlIiBzdHlsZT0ic3RvcC1jb2xvcjojMWUzYzcyO3N0b3Atb3BhY2l0eToxIiAvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3R5bGU9InN0b3AtY29sb3I6IzJhNTI5ODtzdG9wLW9wYWNpdHk6MSIgLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB3aWR0aD0iMTIwMCIgaGVpZ2h0PSI0MDAiIGZpbGw9InVybCgjZ3JhZCkiLz48L3N2Zz4=');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 30px;
+            animation: fadeInUp 1s ease-out 0.2s;
+            animation-fill-mode: both;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: fadeInUp 1s ease-out 0.4s;
+            animation-fill-mode: both;
+        }
+
+        .btn {
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-primary {
+            background: #ffc107;
+            color: #333;
+        }
+
+        .btn-primary:hover {
+            background: #e0a800;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(255, 193, 7, 0.3);
+        }
+
+        .btn-whatsapp {
+            background: #25d366;
+            color: white;
+        }
+
+        .btn-whatsapp:hover {
+            background: #1da851;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(37, 211, 102, 0.3);
+        }
+
+        /* Products Section */
+        .products {
+            padding: 60px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #1e3c72;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 50px;
+            font-size: 1.1rem;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+
+        .product-image {
+            height: 200px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .product-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: #ff4757;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: bold;
+        }
+
+        .product-content {
+            padding: 25px;
+        }
+
+        .product-title {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: #1e3c72;
+        }
+
+        .product-description {
+            color: #666;
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+
+        .product-features {
+            list-style: none;
+            margin-bottom: 20px;
+        }
+
+        .product-features li {
+            padding: 5px 0;
+            color: #555;
+            display: flex;
+            align-items: center;
+        }
+
+        .product-features li i {
+            color: #25d366;
+            margin-right: 10px;
+        }
+
+        .product-actions {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .product-actions .btn {
+            flex: 1;
+            justify-content: center;
+            font-size: 0.9rem;
+            padding: 10px 15px;
+        }
+
+        /* Services Section */
+        .services {
+            background: white;
+            padding: 60px 20px;
+        }
+
+        .services-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            text-align: center;
+            padding: 30px 20px;
+            border-radius: 10px;
+            transition: all 0.3s;
+            background: #f8f9fa;
+        }
+
+        .service-card:hover {
+            background: white;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transform: translateY(-5px);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            color: #1e3c72;
+            margin-bottom: 20px;
+        }
+
+        .service-title {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        /* Why Choose Us */
+        .why-us {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .why-us .section-title {
+            color: white;
+        }
+
+        .features-grid {
+            max-width: 1000px;
+            margin: 50px auto 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+        }
+
+        .feature {
+            animation: fadeIn 1s ease-out;
+        }
+
+        .feature i {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            color: #ffc107;
+        }
+
+        .feature h3 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        /* Offer Banner */
+        .offer-banner {
+            background: linear-gradient(135deg, #ff6b6b 0%, #ff4757 100%);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            margin: 60px 0;
+        }
+
+        .offer-banner h2 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .offer-banner p {
+            font-size: 1.2rem;
+            margin-bottom: 25px;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 60px 20px;
+            background: white;
+        }
+
+        .contact-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .contact-info {
+            padding: 30px;
+            background: #f8f9fa;
+            border-radius: 15px;
+        }
+
+        .contact-info h3 {
+            margin-bottom: 20px;
+            color: #1e3c72;
+            font-size: 1.5rem;
+        }
+
+        .contact-item {
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .contact-item i {
+            font-size: 1.5rem;
+            color: #1e3c72;
+            width: 30px;
+        }
+
+        .contact-item a {
+            color: #333;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .contact-item a:hover {
+            color: #1e3c72;
+        }
+
+        /* Footer */
+        footer {
+            background: #1e3c72;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        .social-links {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .social-links a {
+            color: white;
+            font-size: 1.5rem;
+            transition: transform 0.3s;
+        }
+
+        .social-links a:hover {
+            transform: translateY(-3px);
+            color: #ffc107;
+        }
+
+        /* Floating WhatsApp Button */
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 30px;
+            right: 30px;
+            background: #25d366;
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            animation: pulse 2s infinite;
+            transition: all 0.3s;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 5px 20px rgba(37, 211, 102, 0.5);
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav ul {
+                flex-direction: column;
+                text-align: center;
+                gap: 10px;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .products-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .offer-banner h2 {
+                font-size: 1.8rem;
+            }
+
+            main {
+                margin-top: 120px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <i class="fas fa-bolt"></i>
+                Arora Enterprises
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <h1>Welcome to Arora Enterprises</h1>
+            <p>Your Trusted Partner for Electronics & Solar Solutions in Sirsa</p>
+            <div class="cta-buttons">
+                <a href="tel:+919416243190" class="btn btn-primary">
+                    <i class="fas fa-phone"></i> Call Now
+                </a>
+                <a href="https://wa.me/919416243190?text=Hi%20Arora%20Enterprises!%20I%20need%20help%20with%20electronics%20products." class="btn btn-whatsapp">
+                    <i class="fab fa-whatsapp"></i> WhatsApp Us
+                </a>
+            </div>
+        </section>
+
+        <!-- Products Section -->
+        <section id="products" class="products">
+            <h2 class="section-title">Our Premium Products</h2>
+            <p class="section-subtitle">Quality electronics for your home and business</p>
+            
+            <div class="products-grid">
+                <!-- RO Water Purifier -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://via.placeholder.com/400x200/667eea/ffffff?text=RO+Water+Purifier" alt="RO Water Purifier">
+                        <span class="product-badge">Best Seller</span>
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">RO Water Purifiers</h3>
+                        <p class="product-description">Advanced multi-stage purification systems for crystal-clear, safe drinking water.</p>
+                        <ul class="product-features">
+                            <li><i class="fas fa-check"></i> 7-stage purification</li>
+                            <li><i class="fas fa-check"></i> UV+UF technology</li>
+                            <li><i class="fas fa-check"></i> Free installation</li>
+                            <li><i class="fas fa-check"></i> 1-year warranty</li>
+                        </ul>
+                        <div class="product-actions">
+                            <a href="tel:+919416243190" class="btn btn-primary">
+                                <i class="fas fa-phone"></i> Call
+                            </a>
+                            <a href="https://wa.me/919416243190?text=Hi!%20I'm%20interested%20in%20RO%20Water%20Purifiers." class="btn btn-whatsapp">
+                                <i class="fab fa-whatsapp"></i> Enquire
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Inverter & Battery -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://via.placeholder.com/400x200/764ba2/ffffff?text=Inverter+%26+Battery" alt="Inverter & Battery">
+                        <span class="product-badge">Popular</span>
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Inverters & Batteries</h3>
+                        <p class="product-description">Reliable power backup solutions for uninterrupted electricity supply.</p>
+                        <ul class="product-features">
+                            <li><i class="fas fa-check"></i> High capacity inverters</li>
+                            <li><i class="fas fa-check"></i> Long-lasting batteries</li>
+                            <li><i class="fas fa-check"></i> Quick charging</li>
+                            <li><i class="fas fa-check"></i> 2-year warranty</li>
+                        </ul>
+                        <div class="product-actions">
+                            <a href="tel:+919254732191" class="btn btn-primary">
+                                <i class="fas fa-phone"></i> Call
+                            </a>
+                            <a href="https://wa.me/919254732191?text=Hi!%20I%20need%20information%20about%20Inverters%20and%20Batteries." class="btn btn-whatsapp">
+                                <i class="fab fa-whatsapp"></i> Enquire
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Solar Systems -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://via.placeholder.com/400x200/f39c12/ffffff?text=Solar+Systems" alt="Solar Systems">
+                        <span class="product-badge">Eco-Friendly</span>
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Solar Solutions</h3>
+                        <p class="product-description">Complete solar systems for sustainable and cost-effective energy.</p>
+                        <ul class="product-features">
+                            <li><i class="fas fa-check"></i> On-grid & off-grid systems</li>
+                            <li><i class="fas fa-check"></i> Government subsidy support</li>
+                            <li><i class="fas fa-check"></i> Professional installation</li>
+                            <li><i class="fas fa-check"></i> 25-year panel warranty</li>
+                        </ul>
+                        <div class="product-actions">
+                            <a href="tel:+919416243190" class="btn btn-primary">
+                                <i class="fas fa-phone"></i> Call
+                            </a>
+                            <a href="https://wa.me/919416243190?text=Hi!%20I%20want%20to%20know%20about%20Solar%20Systems." class="btn btn-whatsapp">
+                                <i class="fab fa-whatsapp"></i> Enquire
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Geysers -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://via.placeholder.com/400x200/e74c3c/ffffff?text=Water+Geysers" alt="Water Geysers">
+                        <span class="product-badge">Winter Special</span>
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Water Geysers</h3>
+                        <p class="product-description">Energy-efficient water heating systems for all seasons.</p>
+                        <ul class="product-features">
+                            <li><i class="fas fa-check"></i> Instant & storage options</li>
+                            <li><i class="fas fa-check"></i> 5-star energy rating</li>
+                            <li><i class="fas fa-check"></i> Anti-rust coating</li>
+                            <li><i class="fas fa-check"></i> 2-year warranty</li>
+                        </ul>
+                        <div class="product-actions">
+                            <a href="tel:+919254732191" class="btn btn-primary">
+                                <i class="fas fa-phone"></i> Call
+                            </a>
+                            <a href="https://wa.me/919254732191?text=Hi!%20I'm%20looking%20for%20Water%20Geysers." class="btn btn-whatsapp">
+                                <i class="fab fa-whatsapp"></i> Enquire
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="services">
+            <h2 class="section-title">Our Services</h2>
+            <p class="section-subtitle">Complete solutions under one roof</p>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <i class="fas fa-tools service-icon"></i>
+                    <h3 class="service-title">Repair Services</h3>
+                    <p>Expert repair for all electronics with warranty on service</p>
+                    <a href="https://wa.me/919416243190?text=Hi!%20I%20need%20repair%20service." class="btn btn-whatsapp">
+                        <i class="fab fa-whatsapp"></i> Book Repair
+                    </a>
+                </div>
+
+                <div class="service-card">
+                    <i class="fas fa-home service-icon"></i>
+                    <h3 class="service-title">Installation</h3>
+                    <p>Professional installation of all products at your doorstep</p>
+                    <a href="https://wa.me/919254732191?text=Hi!%20I%20need%20installation%20service." class="btn btn-whatsapp">
+                        <i class="fab fa-whatsapp"></i> Schedule Install
+                    </a>
+                </div>
+
+                <div class="service-card">
+                    <i class="fas fa-shield-alt service-icon"></i>
+                    <h3 class="service-title">AMC Plans</h3>
+                    <p>Annual maintenance contracts for worry-free operation</p>
+                    <a href="https://wa.me/919416243190?text=Hi!%20Tell%20me%20about%20AMC%20plans." class="btn btn-whatsapp">
+                        <i class="fab fa-whatsapp"></i> Get AMC
+                    </a>
+                </div>
+
+                <div class="service-card">
+                    <i class="fas fa-recycle service-icon"></i>
+                    <h3 class="service-title">Buyback Facility</h3>
+                    <p>Fair prices for your old electronics and appliances</p>
+                    <a href="https://wa.me/919254732191?text=Hi!%20I%20want%20to%20sell%20old%20electronics." class="btn btn-whatsapp">
+                        <i class="fab fa-whatsapp"></i> Sell Now
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Us -->
+        <section class="why-us">
+            <h2 class="section-title">Why Choose Arora Enterprises?</h2>
+            <div class="features-grid">
+                <div class="feature">
+                    <i class="fas fa-award"></i>
+                    <h3>Trusted Since Years</h3>
+                    <p>Serving Sirsa with excellence</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-user-tie"></i>
+                    <h3>Expert Technicians</h3>
+                    <p>Certified & experienced team</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-tag"></i>
+                    <h3>Best Prices</h3>
+                    <p>Competitive & transparent pricing</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-headset"></i>
+                    <h3>24/7 Support</h3>
+                    <p>Always here to help you</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Special Offer Banner -->
+        <section class="offer-banner">
+            <h2>🎉 Special Offer - Limited Time!</h2>
+            <p>Get 10% OFF on your first purchase + Free Installation</p>
+            <a href="https://wa.me/919416243190?text=Hi!%20I%20want%20to%20claim%20the%2010%25%20discount%20offer." class="btn btn-primary">
+                <i class="fab fa-whatsapp"></i> Claim Offer on WhatsApp
+            </a>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <h2 class="section-title">Get In Touch</h2>
+            <p class="section-subtitle">Visit our store or contact us anytime</p>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3><i class="fas fa-store"></i> Visit Our Store</h3>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <strong>Address:</strong><br>
+                            Gandhi Colony, Sirsa<br>
+                            Haryana - 125055
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <strong>Store Timings:</strong><br>
+                            Monday - Sunday<br>
+                            9:00 AM - 8:00 PM
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-info">
+                    <h3><i class="fas fa-phone-alt"></i> Quick Contact</h3>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <strong>Phone Numbers:</strong><br>
+                            <a href="tel:+919416243190">+91 9416243190</a><br>
+                            <a href="tel:+919254732191">+91 9254732191</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-whatsapp"></i>
+                        <div>
+                            <strong>WhatsApp:</strong><br>
+                            <a href="https://wa.me/919416243190">+91 9416243190</a> (Sales)<br>
+                            <a href="https://wa.me/919254732191">+91 9254732191</a> (Service)
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <strong>Email:</strong><br>
+                            <a href="mailto:info@aroraenterprises.in">info@aroraenterprises.in</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Google Maps Embed (Optional) -->
+            <div style="max-width: 1000px; margin: 40px auto 0;">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3484.123456789!2d75.123456!3d29.123456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sGandhi%20Colony%2C%20Sirsa!5e0!3m2!1sen!2sin!4v1234567890" 
+                    width="100%" 
+                    height="350" 
+                    style="border:0; border-radius: 10px;" 
+                    allowfullscreen="" 
+                    loading="lazy">
+                </iframe>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Arora Enterprises. All Rights Reserved.</p>
+        <p>Your Trusted Electronics & Solar Partner in Sirsa</p>
+        <div class="social-links">
+            <a href="https://wa.me/919416243190" title="WhatsApp">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="https://www.facebook.com/aroraenterprises" title="Facebook">
+                <i class="fab fa-facebook"></i>
+            </a>
+            <a href="https://www.instagram.com/aroraenterprises" title="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="tel:+919416243190" title="Call Us">
+                <i class="fas fa-phone"></i>
+            </a>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/919416243190?text=Hi%20Arora%20Enterprises!%20I%20need%20assistance." class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- JavaScript for smooth scrolling -->
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            });
+        });
+
+        // Add animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all product cards and service cards
+        document.querySelectorAll('.product-card, .service-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = 'all 0.6s ease-out';
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>
